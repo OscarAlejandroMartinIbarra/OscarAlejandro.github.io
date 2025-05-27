@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyecto de Automatización de Horno Industrial</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header, footer { background: #003366; color: white; padding: 1em 2em; text-align: center; }
+    main { padding: 2em; }
+    section { margin-bottom: 2em; }
+    h1, h2, h3 { color: #003366; }
+    ul { margin-left: 1.5em; }
+    .autor { font-weight: bold; margin-top: 1em; }
+    .panel { background: #fff; padding: 1em; border-radius: 6px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sistema de Monitoreo y Control Automatizado para Horno Industrial</h1>
+</header>
+
+<main>
+
+  <section class="panel">
+    <h2>Introducción</h2>
+    <p>La automatización industrial ha revolucionado el monitoreo y control de procesos productivos, especialmente en sistemas térmicos como hornos. Este proyecto implementa un sistema con sensores y actuadores para garantizar eficiencia, seguridad y control en tiempo real mediante una interfaz en LabVIEW y una tarjeta Arduino.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Objetivo</h2>
+    <p>Desarrollar e implementar un sistema de monitoreo y control automatizado para un horno industrial utilizando LabVIEW y Arduino, integrando sensores (gas, temperatura, flama y presencia) y actuadores (LEDs, buzzer, servomotor) para mejorar la seguridad y eficiencia operativa.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Marco Teórico</h2>
+    <h3>Automatización Industrial y Control de Procesos</h3>
+    <p>La automatización reduce la intervención humana mediante tecnologías de monitoreo y control. Esto permite operar hornos industriales de forma más segura y eficiente.</p>
+
+    <h3>LabVIEW</h3>
+    <p>LabVIEW es un entorno de programación gráfica que permite crear interfaces y diagramas para controlar sistemas mediante adquisición de datos.</p>
+
+    <h3>Comunicación Serial y LINX</h3>
+    <p>LabVIEW se comunica con Arduino mediante el protocolo VISA y el toolkit LINX, permitiendo la lectura y escritura de datos en tiempo real.</p>
+
+    <h3>Sensores Utilizados</h3>
+    <ul>
+      <li>Sensor de gas (analógico)</li>
+      <li>Sensor de temperatura (analógico)</li>
+      <li>Sensor de flama (digital)</li>
+      <li>Sensor de presencia (digital)</li>
+    </ul>
+
+    <h3>Actuadores</h3>
+    <ul>
+      <li>LEDs indicadores</li>
+      <li>Buzzer de alerta</li>
+      <li>Servomotor (control de puerta)</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Desarrollo del Proyecto</h2>
+    <p>El sistema se comunica con Arduino usando VISA. Se usan bloques de LabVIEW como Analog Read, Digital Read/Write y PWM Write. Los sensores monitorean condiciones críticas y los actuadores responden con alarmas o mecanismos físicos.</p>
+    <h3>Bloques clave en LabVIEW</h3>
+    <ul>
+      <li><strong>Serial Port (VISA):</strong> comunicación con Arduino</li>
+      <li><strong>Analog Read:</strong> lectura de sensores de gas y temperatura</li>
+      <li><strong>Digital Read:</strong> lectura de sensores de flama y presencia</li>
+      <li><strong>Digital Write:</strong> control de LEDs y buzzer</li>
+      <li><strong>PWM Write:</strong> control del servomotor de la puerta</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Funcionamiento del Sistema</h2>
+    <p>El sistema opera en tiempo real. Los sensores proporcionan datos continuamente, que son analizados y comparados con umbrales críticos para activar respuestas lógicas y físicas.</p>
+    <ul>
+      <li><strong>Temperatura > 125 °C:</strong> activa alarma y bloquea la puerta</li>
+      <li><strong>Gas sin flama:</strong> se activa alarma por posible fuga</li>
+      <li><strong>Presencia:</strong> activa advertencia de seguridad</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Casos de Uso y Seguridad</h2>
+    <p>El sistema responde ante distintos escenarios:</p>
+    <ul>
+      <li>Alta temperatura: activa LED de advertencia y bloquea la puerta</li>
+      <li>Detección de flama: asegura la presencia de combustión</li>
+      <li>Fuga de gas: sin flama activa el buzzer y la advertencia</li>
+      <li>Presencia de persona: bloquea el sistema si hay riesgo</li>
+    </ul>
+    <p>La interfaz en LabVIEW simula gráficamente cada situación y muestra animaciones para una mejor comprensión del estado del horno.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Conclusiones</h2>
+    <p class="autor">Lara Viramontes Jesús Emanuel:</p>
+    <p>La integración de LabVIEW y Arduino permitió monitorear múltiples variables en un entorno industrial, mejorando significativamente la seguridad del horno.</p>
+
+    <p class="autor">Martín Ibarra Oscar Alejandro:</p>
+    <p>Este proyecto demuestra que LabVIEW permite una interacción robusta con sensores y actuadores en tiempo real, ideal para sistemas industriales inteligentes.</p>
+
+    <p class="autor">Resendiz Alvarez Cynthia Jennifer:</p>
+    <p>Con este sistema se implementan funciones clave de la Industria 4.0, respondiendo eficazmente a escenarios de riesgo mediante sensores y lógica programada.</p>
+
+    <p class="autor">Vázquez César Alejandro:</p>
+    <p>La combinación de hardware y software flexible demuestra que estos sistemas son escalables y aplicables a procesos más complejos dentro de la automatización industrial.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 - Proyecto Automatización Horno Industrial | Universidad Tecnológica</p>
+</footer>
+
+</body>
+</html>
